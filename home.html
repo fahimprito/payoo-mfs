@@ -20,7 +20,10 @@
                     <!-- Available Balance -->
                     <div class="stats shadow">
                         <div class="stat">
-                            <div class="stat-value">89400</div>
+                            <div class="flex">
+                                <p class="stat-value">$</p>
+                                <div id="account-balance" class="stat-value">89400</div>
+                            </div>
                             <div class="stat-desc">Available Balance</div>
                         </div>
                     </div>
@@ -38,14 +41,14 @@
                                 <label class="label">
                                     <span class="label-text">Amount</span>
                                 </label>
-                                <input id="input-add-money" type="text" placeholder="Amount"
+                                <input id="input-add-money" type="number" placeholder="Amount"
                                     class="input input-bordered" required />
                             </div>
                             <div class="form-control">
                                 <label class="label">
                                     <span class="label-text">Pin</span>
                                 </label>
-                                <input id="input-pin-number" type="password" placeholder="Pin Number"
+                                <input id="pin-no" type="password" placeholder="Pin Number"
                                     class="input input-bordered" autocomplete="off" required />
                             </div>
                             <div class="form-control mt-6">
