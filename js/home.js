@@ -6,6 +6,7 @@ document.getElementById("btn-add-money").addEventListener('click', function (eve
     // console.log("add-money clicked");
 
     const addMoneyInput = document.getElementById("input-add-money").value;
+    const addMoneyNumber = parseFloat(addMoneyInput);
     const pinNumber = document.getElementById("pin-no").value;
     // console.log(addMoneyInput, pinNumber);
 
@@ -13,12 +14,11 @@ document.getElementById("btn-add-money").addEventListener('click', function (eve
         console.log("added");
         
         const balance = document.getElementById('account-balance').innerText;
-        // console.log(balance);
-
-        const addMoneyNumber = parseFloat(addMoneyInput);
         const balanceNumber = parseFloat(balance);
+        // console.log(balance);
+        
         const newBalance = balanceNumber + addMoneyNumber;
-        console.log(newBalance);
+        // console.log(newBalance);
 
         // set value 
         document.getElementById('account-balance').innerText = newBalance;
