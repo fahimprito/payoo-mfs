@@ -5,7 +5,7 @@ document.getElementById("btn-add-money").addEventListener("click", function (eve
 
     const addMoney = getInputFieldValueById('input-add-money');
     const pinNumber = getInputFieldValueById('pin-no');
-    console.log('amount', addMoney, 'pinNumber', pinNumber);
+    // console.log('amount', addMoney, 'pinNumber', pinNumber);
     
 
     if (pinNumber === 111) {
