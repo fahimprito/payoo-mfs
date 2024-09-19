@@ -5,12 +5,23 @@ document.getElementById("btn-cash-out").addEventListener('click', function (even
 
     const cashOutMoney = getInputFieldValueById('input-cash-out');
     const pinNumber = getInputFieldValueById('input-cash-out-pin');
-    console.log('cashOutMoney', cashOutMoney, 'pinNumber', pinNumber);
+    // console.log('cashOutMoney', cashOutMoney, 'pinNumber', pinNumber);
 
+    if (isNaN(cashOutMoney)) {
+        alert('Enter a valid amount!');
+        return;
+    }
 
 
     if (pinNumber === 111) {
         const balance = getTextFieldValueById('account-balance');
+
+        if (cashOutMoney > balance) {
+            alert('You do not have enough money to cash out');
+            return;
+        }
+
+
         const newBalance = balance - cashOutMoney;
 
         document.getElementById("account-balance").innerText = newBalance;

@@ -7,6 +7,10 @@ document.getElementById("btn-add-money").addEventListener("click", function (eve
     const pinNumber = getInputFieldValueById('pin-no');
     // console.log('amount', addMoney, 'pinNumber', pinNumber);
 
+    if (isNaN(addMoney)) {
+        alert('Enter a valid amount!');
+        return;
+    }
 
     if (pinNumber === 111) {
         const balance = getTextFieldValueById('account-balance');
